@@ -1,0 +1,13 @@
+{"urls": [
+    {
+        "id": "1",
+        "long_url": "https://docs.cypress.io/api/commands/intercept#Waiting-on-a-request",
+        "short_url": "https://muchshorter.io"
+    },
+    {
+        "id": "2",
+        "long_url": "https://reallycoolpuppypics.com/goldens/withglasses/id:44",
+        "short_url": "https://muchshorter.com"
+    }
+]
+}

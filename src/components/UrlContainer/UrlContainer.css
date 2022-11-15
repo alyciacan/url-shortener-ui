@@ -4,4 +4,7 @@
   margin: 10px;
   padding: 5px;
   background-color: #FFF;
+  max-height: 30vh;
+  max-width: 30vw;
+  overflow: scroll;
 }

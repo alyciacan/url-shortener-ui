@@ -44,7 +44,7 @@ class UrlForm extends Component {
           onChange={e => this.handleNameChange(e)}
         />
 
-        <button onClick={e => this.handleSubmit(e)}>
+        <button disabled={!this.state.title || !this.state.urlToShorten} onClick={e => this.handleSubmit(e)}>
           Shorten Please!
         </button>
       </form>

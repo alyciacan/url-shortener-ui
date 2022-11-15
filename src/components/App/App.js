@@ -17,16 +17,18 @@ export class App extends Component {
   componentDidMount() {
     getUrls()
       .then(allUrls => this.setState({ urls: allUrls.urls }))
+      .catch(() => this.setState({confMsg: "There was an error. Try again later."}))
   }
 
   submitNewUrl(usersUrl) {
     const postReq = { method: 'POST', body: JSON.stringify(usersUrl), headers: {'content-type': 'application/json'} }
     postUrl(postReq)
-      .then(() => this.setState({ confMsg: "Success!"}))
+      .then((resp) => this.setState({ urls: [resp, ...this.state.urls], confMsg: "Success!"}))
+      .catch(() => this.setState({confMsg: "Could not process your request. Try again later."}))
   }
 
+
   render() {
-    // console.log(this.state.urls)
     return (
       <main className="App">
         <header>
